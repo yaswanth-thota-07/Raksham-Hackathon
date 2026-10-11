@@ -4,7 +4,7 @@ message: >-
   covers the classical ensemble baseline, not the XLS-R + AASIST detector or
   the full platform in this repository.
 type: software
-title: VoiceGuard
+title: SonicShield
 abstract: >-
   Real-time voice deepfake detection, synthesis watermarking, and vishing
   defence.

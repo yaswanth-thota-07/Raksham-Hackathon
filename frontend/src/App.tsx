@@ -26,9 +26,9 @@ export default function App() {
         <div className="max-w-5xl mx-auto flex items-center justify-between">
           <div className="flex items-center gap-3">
             <div className="w-8 h-8 bg-indigo-600 rounded-lg flex items-center justify-center">
-              <span className="text-white font-bold text-sm">VG</span>
+              <span className="text-white font-bold text-sm">SS</span>
             </div>
-            <span className="text-white font-semibold text-lg">VoiceGuard</span>
+            <span className="text-white font-semibold text-lg">SonicShield</span>
             <span className="text-gray-500 text-sm hidden sm:block">
               Real-time Voice Deepfake Detection
             </span>
@@ -73,7 +73,7 @@ export default function App() {
       {/* Footer */}
       <footer className="bg-gray-900 border-t border-gray-800 px-6 py-3">
         <div className="max-w-5xl mx-auto flex items-center justify-between text-xs text-gray-600">
-          <span>Canadian University Dubai · GP2 2025/26</span>
+          <span>SonicShield · 2026</span>
           <span>Apache 2.0 License</span>
         </div>
       </footer>

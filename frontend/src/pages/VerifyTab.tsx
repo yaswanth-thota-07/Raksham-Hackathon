@@ -8,9 +8,9 @@ import { ApiError } from '../config/apiConfig'
 
 const VERDICT_VIEW: Record<ProvenanceVerdict, { label: string; cls: string; blurb: string }> = {
   'voiceguard-generated': {
-    label: 'VoiceGuard-generated',
+    label: 'SonicShield-generated',
     cls: 'border-indigo-500 text-indigo-300',
-    blurb: 'The keyed spectral watermark matches — this clip was synthesised by VoiceGuard.',
+    blurb: 'The keyed spectral watermark matches — this clip was synthesised by SonicShield.',
   },
   'ai-generated': {
     label: 'AI-generated (C2PA)',
@@ -110,7 +110,7 @@ export default function VerifyTab() {
       <div>
         <h2 className="text-xl font-semibold text-white mb-1">Verify Provenance</h2>
         <p className="text-sm text-gray-400">
-          The read side of Generate: check an audio file for VoiceGuard's spectral watermark and
+          The read side of Generate: check an audio file for SonicShield's spectral watermark and
           embedded C2PA manifest. Files are auto-deleted after 60s (PDPL).
         </p>
       </div>

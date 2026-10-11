@@ -1,21 +1,19 @@
-# Contributing to VoiceGuard
+# Contributing to SonicShield
 
-Thanks for your interest in VoiceGuard! This is a graduation research project
-(GP2) on voice deepfake detection, synthesis watermarking, and vishing defence.
-Contributions — bug reports, fixes, docs, and ideas — are welcome.
+Thanks for your interest in SonicShield! Contributions — bug reports, fixes, docs, and ideas — are welcome.
 
 ## Ways to contribute
 
-- 🐛 **Report a bug** — open a [bug report](.github/ISSUE_TEMPLATE/bug_report.yml).
-- 💡 **Request a feature** — open a [feature request](.github/ISSUE_TEMPLATE/feature_request.yml).
+- 🐛 **Report a bug** — open an issue.
+- 💡 **Request a feature** — open a feature request.
 - 🔒 **Report a vulnerability** — see [SECURITY.md](SECURITY.md) (please do **not** open a public issue).
 - 📝 **Improve docs**, ✅ **add tests**, or 🔧 **fix a bug** via a pull request.
 
 ## Development setup
 
 ```bash
-git clone https://github.com/MohammadThabetHassan/VoiceGuard.git
-cd VoiceGuard
+git clone https://github.com/username/SonicShield.git
+cd SonicShield
 
 # Backend (Python 3.12). The package is import-run via PYTHONPATH; on
 # externally-managed environments use a venv.

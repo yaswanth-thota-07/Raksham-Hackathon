@@ -20,7 +20,7 @@ export const generateReport = async (result: DetectionResult): Promise<ForensicR
     headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify({
       audio_hash: result.audio_hash,
-      analyst_name: 'VoiceGuard Analyst',
+      analyst_name: 'SonicShield Analyst',
     }),
   })
   if (!res.ok) {

@@ -1,8 +1,7 @@
 # Security Policy
 
-VoiceGuard is a graduation research project (GP2) that detects and watermarks
-AI-generated speech. We take the security of the platform and of the people who
-interact with it seriously.
+SonicShield takes the security of the platform and the data entrusted to it
+seriously.
 
 ## Supported versions
 
@@ -17,10 +16,7 @@ Only the latest tagged release on the `main` branch receives security fixes.
 
 **Please do not open a public issue for security vulnerabilities.**
 
-Report privately through GitHub's coordinated disclosure:
-
-1. Go to <https://github.com/MohammadThabetHassan/VoiceGuard/security/advisories>
-2. Click **"Report a vulnerability"** to open a private advisory.
+Report privately through repository security advisories or by contacting the maintainers directly.
 
 Please include:
 

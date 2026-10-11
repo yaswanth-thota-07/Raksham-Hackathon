@@ -1,12 +1,11 @@
 <div align="center">
 
-<img src="assets/hero.png" alt="VoiceGuard" width="100%">
+<img src="assets/hero.png" alt="SonicShield" width="100%">
 
-# VoiceGuard
+# SonicShield
 
 **Real-time voice deepfake detection, synthesis watermarking, and vishing defence.**
 
-[![CI](https://github.com/MohammadThabetHassan/VoiceGuard/actions/workflows/ci.yml/badge.svg)](https://github.com/MohammadThabetHassan/VoiceGuard/actions/workflows/ci.yml)
 [![License: Apache 2.0](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](LICENSE)
 [![Python 3.12](https://img.shields.io/badge/python-3.12-3776AB?logo=python&logoColor=white)](https://www.python.org)
 [![FastAPI](https://img.shields.io/badge/FastAPI-009688?logo=fastapi&logoColor=white)](https://fastapi.tiangolo.com)
@@ -14,10 +13,9 @@
 [![PyTorch](https://img.shields.io/badge/PyTorch-EE4C2C?logo=pytorch&logoColor=white)](https://pytorch.org)
 [![Ruff](https://img.shields.io/endpoint?url=https://raw.githubusercontent.com/astral-sh/ruff/main/assets/badge/v2.json)](https://github.com/astral-sh/ruff)
 [![PRs welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](CONTRIBUTING.md)
-[![IEEE SM2026](https://img.shields.io/badge/IEEE-SM2026-00629B.svg)](https://doi.org/10.1109/SM69703.2026.11614145)
 
-[**🎬 Demo video**](assets/demo.mp4) ·
 <a href="#-quick-start">Quick start</a> ·
+<a href="#-features">Features</a> ·
 <a href="#-results">Results</a> ·
 <a href="#-architecture">Architecture</a> ·
 <a href="#-api">API</a> ·
@@ -28,7 +26,7 @@
 
 ---
 
-## Why VoiceGuard?
+## Why SonicShield?
 
 AI voice cloning has turned phone fraud into a scalable weapon. In 2024 criminals
 stole **US$25M** from a company using a deepfaked CFO on a video call, and reported
@@ -36,10 +34,9 @@ voice-phishing ("vishing") incidents **surged over 1,600%** in early 2025. Off-t
 detectors collapse on *real-world* audio — phone codecs, background noise, and unseen
 TTS engines — and offer no explanation a human analyst can act on.
 
-**VoiceGuard** is an end-to-end platform that detects voice deepfakes in real time,
+**SonicShield** is an end-to-end platform that detects voice deepfakes in real time,
 explains its decisions, watermarks any audio it generates, and ships small enough to
-run at the edge. Built as a graduation project (GP2) at Canadian University Dubai; the
-classical baseline was accepted at **IEEE SM2026**.
+run at the edge.
 
 ## ✨ Features
 
@@ -52,13 +49,7 @@ classical baseline was accepted at **IEEE SM2026**.
 - ☎️ **VoIP** — Twilio Media Streams bridge for live call screening.
 - ⚡ **Edge-ready** — a *separate* tiny model, **DSFNetTiny** (8.47% balanced-mirror EER), exports to ONNX INT8 at **0.62 MB**, **~30 ms** CPU inference ([`edge/README.md`](edge/README.md) benchmarks p50 67.7 ms on x86 including its NumPy front-end). It covers the clone families it was trained on, not premium TTS; the XLS-R + AASIST production model stays on the server.
 
-## 🎬 Demo
-
-End-to-end on the recorded deployment: log in → upload a **premium ElevenLabs clip → flagged 100% FAKE** (588 ms) → generate **watermarked** speech. The hosted demo is currently offline; run it locally with the [Quick start](#-quick-start) below.
-
-![VoiceGuard demo](assets/demo.gif)
-
-> Full-resolution clip: [`assets/demo.mp4`](assets/demo.mp4). Recorded with Playwright (`deploy/demo_record.py`).
+## 📸 Platform Interface
 
 | Detect | Generate | Results |
 |:------:|:--------:|:-------:|
@@ -148,7 +139,7 @@ flowchart LR
 <summary><b>📁 Repository layout</b></summary>
 
 ```
-VoiceGuard/
+SonicShield/
 ├── src/voiceguard/        # Python package
 │   ├── api/               #   FastAPI app — auth (JWT/roles), routes, middleware, WebSockets
 │   ├── models/            #   XLS-R+AASIST, DSFNet, Wav2Vec2/WavLM, classical baseline
@@ -174,8 +165,8 @@ VoiceGuard/
 ## 🚀 Quick start
 
 ```bash
-git clone https://github.com/MohammadThabetHassan/VoiceGuard.git
-cd VoiceGuard
+git clone https://github.com/username/SonicShield.git
+cd SonicShield
 
 # Backend (Python 3.12)
 python3 -m venv venv && source venv/bin/activate
@@ -290,47 +281,6 @@ ruff check src/ tests/
 Contributions welcome — see [CONTRIBUTING.md](CONTRIBUTING.md) and our
 [Code of Conduct](CODE_OF_CONDUCT.md). For vulnerabilities, see [SECURITY.md](SECURITY.md).
 
-## 👥 Team
-
-| Name | Role |
-|------|------|
-| **Mohammad Thabet Hassan** | Detection architecture, FastAPI backend, CI/CD, deployment |
-| **Fahad Sadek Al-Jazzeri** | Feature extraction, classical ML, SSL models, evaluation |
-| **Ahmed Sami Alameri** | React frontend, synthesis, watermarking, VoIP, forensics, XAI |
-
-**Supervisor:** [Dr. Arash Kermani Kolankeh](https://github.com/arashkermaniprojects) · **Institution:** Canadian University Dubai · **2025–2026**
-
-## 🙏 Acknowledgements
-
-A heartfelt **thank you to our supervisor, [Dr. Arash Kermani Kolankeh](https://github.com/arashkermaniprojects)**,
-whose guidance, insight, and encouragement shaped VoiceGuard at every stage. This project
-would not have been possible without his mentorship — thank you, Dr. Arash.
-
-## 📚 Citation
-
-The **IEEE SM2026 acceptance covers the GP1 classical-baseline paper** (feature-based
-detection, F1 = 0.95) — not the full platform or the XLS-R+AASIST results in this
-repository, which post-date the submission. If you cite the accepted work:
-
-```bibtex
-@inproceedings{hassan2026lightweight,
-  title     = {Lightweight Voice Deepfake Detection for Smart Mobility Using
-               Multi-Feature Ensemble Learning},
-  author    = {Hassan, Mohammad Thabet and Sadek, Fahad and Sami, Ahmed and
-               Kolankeh, Arash Kermani},
-  booktitle = {2026 International Conference on Smart Mobility (SM)},
-  pages     = {1--2},
-  year      = {2026},
-  month     = may,
-  publisher = {IEEE},
-  doi       = {10.1109/SM69703.2026.11614145}
-}
-```
-
-Paper: [IEEE Xplore 11614145](https://ieeexplore.ieee.org/document/11614145) ·
-DOI [10.1109/SM69703.2026.11614145](https://doi.org/10.1109/SM69703.2026.11614145).
-Machine-readable citation metadata is in [`CITATION.cff`](CITATION.cff).
-
 ## 📄 License
 
-The original VoiceGuard source code and documentation in this repository are licensed under the [Apache License 2.0](LICENSE). Third-party models, datasets, pretrained weights, synthesis engines, fonts, images, and other external assets remain subject to their own licenses and attribution requirements; see the linked provenance and documentation records before redistribution.
+The original SonicShield source code and documentation in this repository are licensed under the [Apache License 2.0](LICENSE). Third-party models, datasets, pretrained weights, synthesis engines, fonts, images, and other external assets remain subject to their own licenses and attribution requirements; see the linked provenance and documentation records before redistribution.
