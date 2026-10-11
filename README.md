@@ -1,7 +1,5 @@
 <div align="center">
 
-<img src="assets/hero.png" alt="SonicShield" width="100%">
-
 # SonicShield
 
 **Real-time voice deepfake detection, synthesis watermarking, and vishing defence.**
@@ -49,11 +47,6 @@ run at the edge.
 - ☎️ **VoIP** — Twilio Media Streams bridge for live call screening.
 - ⚡ **Edge-ready** — a *separate* tiny model, **DSFNetTiny** (8.47% balanced-mirror EER), exports to ONNX INT8 at **0.62 MB**, **~30 ms** CPU inference ([`edge/README.md`](edge/README.md) benchmarks p50 67.7 ms on x86 including its NumPy front-end). It covers the clone families it was trained on, not premium TTS; the XLS-R + AASIST production model stays on the server.
 
-## 📸 Platform Interface
-
-| Detect | Generate | Results |
-|:------:|:--------:|:-------:|
-| ![Detect](assets/screenshots/01_detect.png) | ![Generate](assets/screenshots/03_generate.png) | ![Results](assets/screenshots/04_results.png) |
 
 ## 📊 Results
 
