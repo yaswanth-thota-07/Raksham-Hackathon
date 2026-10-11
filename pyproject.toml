@@ -53,7 +53,7 @@ dependencies = [
   # Data
   "numpy>=2.4.6",
   "pandas>=2.1.0",
-  "scipy>=1.11.0",
+  "scipy>=1.18.1",
 ]
 # Removed as unused by src/ (verified by import grep): webrtcvad (needs gcc to
 # build), datasets, matplotlib — together they were a large chunk of install
